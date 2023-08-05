@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="room"
+            type="com.example.chatapp.ui.Room" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemReference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDDFE1"
+        android:layout_margin="15dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/categoryIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:AddRoomCategoryImage="@{room.roomCategory}"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@{room.roomCategory}"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/sports"
+            app:layout_constraintTop_toBottomOf="@id/categoryIcon"
+            android:padding="10dp"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
